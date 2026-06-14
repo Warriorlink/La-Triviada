@@ -1453,6 +1453,7 @@ MonoBehaviour:
   menuMusic: {fileID: 8300000, guid: 9449df7ba06db7e4d92884fb6499cbfb, type: 3}
   correctSound: {fileID: 0}
   wrongSound: {fileID: 0}
+  tensionSound: {fileID: 8300000, guid: bb46e4c13f4299b4488d843622cde53b, type: 3}
 --- !u!4 &1657604636
 Transform:
   m_ObjectHideFlags: 0

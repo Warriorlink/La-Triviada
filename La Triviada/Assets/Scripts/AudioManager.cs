@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip menuMusic;
     public AudioClip correctSound;
     public AudioClip wrongSound;
+    public AudioClip tensionSound;
 
     private void Awake()
     {
@@ -46,5 +47,10 @@ public class AudioManager : MonoBehaviour
     public void PlayWrong()
     {
         sfxSource.PlayOneShot(wrongSound);
+    }
+
+    public void PlayTension()
+    {
+        sfxSource.PlayOneShot(tensionSound);
     }
 }
