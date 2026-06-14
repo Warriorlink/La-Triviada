@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
             answerButtons[i].onClick.AddListener(() => OnAnswerClicked(index));
         }
         UpdateNavigationButtons();
+        RestoreQuestionState();
     }
 
     public void OnAnswerClicked(int index)
@@ -58,7 +59,10 @@ public class GameManager : MonoBehaviour
 
     void SelectAnswer(int index)
     {
+        Question q = questions[currentQuestionIndex];
+
         selectedAnswer = index;
+        q.selectedAnswer = index;
 
         for (int i = 0; i < answerButtons.Length; i++)
         {
@@ -81,8 +85,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(
             AudioManager.Instance.tensionSound.length
         );
-
-        Debug.Log("Audio terminado");
 
         Question q = questions[currentQuestionIndex];
 
@@ -111,6 +113,7 @@ public class GameManager : MonoBehaviour
         );
         }
         waitingResult = false;
+        q.revealed = true;
     }
 
     void SetButtonColor(Button button, Color color)
@@ -129,6 +132,7 @@ public class GameManager : MonoBehaviour
             SetButtonColor(
                 answerButtons[selectedAnswer],
                 correctColor);
+            q.isCorrect = true;
         }
         else
         {
@@ -186,6 +190,45 @@ public class GameManager : MonoBehaviour
 
         selectedAnswer = -1;
         waitingResult = false;
+    }
+
+    void RestoreQuestionState()
+    {
+        Question q = questions[currentQuestionIndex];
+
+        ResetButtons();
+
+        if (q.selectedAnswer == -1)
+            return;
+
+        selectedAnswer = q.selectedAnswer;
+
+        if (!q.revealed)
+        {
+            answerButtons[q.selectedAnswer]
+                .GetComponent<Image>().color = selectedColor;
+
+            return;
+        }
+
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = false;
+        }
+
+        if (q.selectedAnswer == q.correctAnswer)
+        {
+            answerButtons[q.selectedAnswer]
+                .GetComponent<Image>().color = correctColor;
+        }
+        else
+        {
+            answerButtons[q.selectedAnswer]
+                .GetComponent<Image>().color = wrongColor;
+
+            answerButtons[q.correctAnswer]
+                .GetComponent<Image>().color = correctColor;
+        }
     }
 
     void UpdateNavigationButtons()
