@@ -53,4 +53,14 @@ public class AudioManager : MonoBehaviour
     {
         sfxSource.PlayOneShot(tensionSound);
     }
+
+    public void PauseMenuMusic()
+    {
+        musicSource.Pause();
+    }
+
+    public void ResumeMenuMusic()
+    {
+        musicSource.UnPause();
+    }
 }

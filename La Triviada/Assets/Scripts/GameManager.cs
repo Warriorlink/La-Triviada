@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour
     private int currentQuestionIndex = 0;
     private int selectedAnswer = -1;
     private bool waitingResult = false;
-    private bool answerRevealed = false;
+
+    public Button nextButton;
+    public Button previousButton;
 
     public Color normalColor = Color.white;
     public Color selectedColor = Color.yellow;
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
             answerButtons[i].onClick.RemoveAllListeners();
             answerButtons[i].onClick.AddListener(() => OnAnswerClicked(index));
         }
+        UpdateNavigationButtons();
     }
 
     public void OnAnswerClicked(int index)
@@ -73,8 +76,8 @@ public class GameManager : MonoBehaviour
         foreach (Button button in answerButtons)
             button.interactable = false;
 
+        AudioManager.Instance.PauseMenuMusic();
         AudioManager.Instance.PlayTension();
-        //yield return new WaitForSeconds(2f);
         yield return new WaitForSeconds(
             AudioManager.Instance.tensionSound.length
         );
@@ -85,12 +88,17 @@ public class GameManager : MonoBehaviour
 
         if (selectedAnswer == q.correctAnswer)
         {
+            AudioManager.Instance.PlayCorrect();
             SetButtonColor(
                 answerButtons[selectedAnswer],
                 correctColor);
+            yield return new WaitForSeconds(
+            AudioManager.Instance.correctSound.length
+        );
         }
         else
         {
+            AudioManager.Instance.PlayWrong();
             SetButtonColor(
                 answerButtons[selectedAnswer],
                 wrongColor);
@@ -98,8 +106,11 @@ public class GameManager : MonoBehaviour
             SetButtonColor(
                 answerButtons[q.correctAnswer],
                 correctColor);
+            yield return new WaitForSeconds(
+            AudioManager.Instance.wrongSound.length
+        );
         }
-        answerRevealed = true;
+        waitingResult = false;
     }
 
     void SetButtonColor(Button button, Color color)
@@ -133,16 +144,35 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void NextQuestion()
+    public void NextQuestion()
     {
+        if (waitingResult)
+            return;
+
+        if (currentQuestionIndex >= questions.Length - 1)
+            return;
+
         currentQuestionIndex++;
 
-        if (currentQuestionIndex >= questions.Length)
-        {
-            Debug.Log("Fin del juego");
-            return;
-        }
+        AudioManager.Instance.ResumeMenuMusic();
 
+        ResetButtons();
+        ShowQuestion();
+    }
+
+    public void PreviousQuestion()
+    {
+        if (waitingResult)
+            return;
+
+        if (currentQuestionIndex <= 0)
+            return;
+
+        currentQuestionIndex--;
+
+        AudioManager.Instance.ResumeMenuMusic();
+
+        ResetButtons();
         ShowQuestion();
     }
 
@@ -156,5 +186,14 @@ public class GameManager : MonoBehaviour
 
         selectedAnswer = -1;
         waitingResult = false;
+    }
+
+    void UpdateNavigationButtons()
+    {
+        previousButton.gameObject.SetActive(
+            currentQuestionIndex > 0);
+
+        nextButton.gameObject.SetActive(
+            currentQuestionIndex < questions.Length - 1);
     }
 }

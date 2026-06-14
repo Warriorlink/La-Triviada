@@ -1352,7 +1352,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1451,9 +1451,9 @@ MonoBehaviour:
   musicSource: {fileID: 1657604634}
   sfxSource: {fileID: 1657604637}
   menuMusic: {fileID: 8300000, guid: 9449df7ba06db7e4d92884fb6499cbfb, type: 3}
-  correctSound: {fileID: 0}
-  wrongSound: {fileID: 0}
-  tensionSound: {fileID: 8300000, guid: bb46e4c13f4299b4488d843622cde53b, type: 3}
+  correctSound: {fileID: 8300000, guid: bb46e4c13f4299b4488d843622cde53b, type: 3}
+  wrongSound: {fileID: 8300000, guid: 4a75a94530c96094bb5bc46dd896c490, type: 3}
+  tensionSound: {fileID: 8300000, guid: e7cad646bd5693243ad30dbcc151036e, type: 3}
 --- !u!4 &1657604636
 Transform:
   m_ObjectHideFlags: 0
