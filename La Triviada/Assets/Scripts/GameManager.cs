@@ -25,6 +25,21 @@ public class GameManager : MonoBehaviour
         ShowQuestion();
     }
 
+    public Question GetCurrentQuestion()
+    {
+        return questions[currentQuestionIndex];
+    }
+
+    public Button[] GetAnswerButtons()
+    {
+        return answerButtons;
+    }
+
+    public bool IsWaitingResult()
+    {
+        return waitingResult;
+    }
+
     void ShowQuestion()
     {
         Question q = questions[currentQuestionIndex];
@@ -197,6 +212,14 @@ public class GameManager : MonoBehaviour
         Question q = questions[currentQuestionIndex];
 
         ResetButtons();
+
+        for (int i = 0; i < q.discardedAnswers.Length; i++)
+        {
+            if (q.discardedAnswers[i])
+            {
+                answerButtons[i].interactable = false;
+            }
+        }
 
         if (q.selectedAnswer == -1)
             return;

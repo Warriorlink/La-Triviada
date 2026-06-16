@@ -11,4 +11,5 @@ public class Question
     public int selectedAnswer = -1;
     public bool revealed = false;
     public bool isCorrect = false;
+    public bool[] discardedAnswers = new bool[4];
 }
