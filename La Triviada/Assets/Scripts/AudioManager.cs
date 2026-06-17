@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip easyMusic;
     public AudioClip mediumMusic;
     public AudioClip hardMusic;
+    public AudioClip resultsMusic;
+    public AudioClip secretMusic;
     public AudioClip correctSound;
     public AudioClip wrongSound;
     public AudioClip tensionSound;
@@ -30,14 +32,21 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        PlayMenuMusic();
-    }
-
     public void PlayMenuMusic()
     {
         musicSource.clip = menuMusic;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+    public void PlaySecretMusic()
+    {
+        musicSource.clip = secretMusic;
+        musicSource.Play();
+    }
+
+    public void PlayResultsMusic()
+    {
+        musicSource.clip = resultsMusic;
         musicSource.loop = true;
         musicSource.Play();
     }

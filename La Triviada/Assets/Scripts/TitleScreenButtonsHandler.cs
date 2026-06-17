@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreenButtonsHandler : MonoBehaviour
 {
+    void Start()
+    {
+        AudioManager.Instance.PlayMenuMusic();
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("QuizScene");

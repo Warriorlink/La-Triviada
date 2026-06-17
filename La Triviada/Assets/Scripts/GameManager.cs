@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.SceneManagement;  
 
 public class GameManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public Button nextButton;
     public Button previousButton;
+    public Button finishButton;
 
     public Color normalColor = Color.white;
     public Color selectedColor = Color.yellow;
@@ -135,6 +137,7 @@ public class GameManager : MonoBehaviour
         if (selectedAnswer == q.correctAnswer)
         {
             AudioManager.Instance.PlayCorrect();
+            q.isCorrect = true;
             SetButtonColor(
                 answerButtons[selectedAnswer],
                 correctColor);
@@ -290,5 +293,24 @@ public class GameManager : MonoBehaviour
 
         nextButton.gameObject.SetActive(
             currentQuestionIndex < questions.Length - 1);
+
+        finishButton.gameObject.SetActive(
+            currentQuestionIndex == questions.Length - 1);
+    }
+
+    public void FinishQuiz()
+    {
+        int score = 0;
+
+        foreach (Question q in questions)
+        {
+            if (q.isCorrect)
+                score++;
+        }
+        Debug.Log(score);
+        GameData.Instance.finalScore = score;
+        GameData.Instance.totalQuestions = questions.Length;
+
+        SceneManager.LoadScene("ResultsScene");
     }
 }

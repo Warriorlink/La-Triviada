@@ -38,6 +38,8 @@ public class JokerManager : MonoBehaviour
 
     public void ShowRouletteInput()
     {
+        if (gameManager.IsWaitingResult())
+            return;
         rouletteInputField.gameObject.SetActive(true);
         confirmInputButton.gameObject.SetActive(true);
         rouletteButton.interactable = false;
