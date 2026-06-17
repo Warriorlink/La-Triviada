@@ -1450,13 +1450,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1657604634}
   sfxSource: {fileID: 1657604637}
-  menuMusic: {fileID: 8300000, guid: 9449df7ba06db7e4d92884fb6499cbfb, type: 3}
-  easyMusic: {fileID: 8300000, guid: 7f5b5d5b36c25524b935ab2aebc35205, type: 3}
-  mediumMusic: {fileID: 8300000, guid: e343d9869c5705b41a81a21dbcf127c4, type: 3}
+  menuMusic: {fileID: 8300000, guid: 0fee24e9bc3de594c9b6b805226f7cd5, type: 3}
+  easyMusic: {fileID: 8300000, guid: 747d461cf67d242458602d6212984337, type: 3}
+  mediumMusic: {fileID: 8300000, guid: 22fb5eb47148eb94e9824ff0204d5b88, type: 3}
   hardMusic: {fileID: 8300000, guid: 9614823a005408445922ec3e9bbc8f36, type: 3}
-  correctSound: {fileID: 8300000, guid: bb46e4c13f4299b4488d843622cde53b, type: 3}
-  wrongSound: {fileID: 8300000, guid: 4a75a94530c96094bb5bc46dd896c490, type: 3}
-  tensionSound: {fileID: 8300000, guid: e7cad646bd5693243ad30dbcc151036e, type: 3}
+  correctSound: {fileID: 8300000, guid: c78df41bdd4598a4f89d68722d366f71, type: 3}
+  wrongSound: {fileID: 8300000, guid: c63a8d071ecb0774eb19d50a69b3708e, type: 3}
+  tensionSound: {fileID: 8300000, guid: 3755307fe6bd4bc41af37f02b479171c, type: 3}
 --- !u!4 &1657604636
 Transform:
   m_ObjectHideFlags: 0
