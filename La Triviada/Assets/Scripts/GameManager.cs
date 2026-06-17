@@ -20,6 +20,15 @@ public class GameManager : MonoBehaviour
     public Color correctColor = Color.green;
     public Color wrongColor = Color.red;
 
+    public Image backgroundPanel;
+
+    public Sprite easyBackground;
+    public Sprite mediumBackground;
+    public Sprite hardBackground;
+
+    public int mediumIdx = 0;
+    public int hardIdx = 0;
+
     private void Start()
     {
         ShowQuestion();
@@ -40,6 +49,25 @@ public class GameManager : MonoBehaviour
         return waitingResult;
     }
 
+    void UpdateBackground()
+    {
+        if (currentQuestionIndex <= mediumIdx)
+        {
+            backgroundPanel.sprite = easyBackground;
+            AudioManager.Instance.PlayEasyMusic();
+        }
+        else if (currentQuestionIndex <= hardIdx)
+        {
+            backgroundPanel.sprite = mediumBackground;
+            AudioManager.Instance.PlayMediumMusic();
+        }
+        else
+        {
+            backgroundPanel.sprite = hardBackground;
+            AudioManager.Instance.PlayHardMusic();
+        }
+    }
+
     void ShowQuestion()
     {
         Question q = questions[currentQuestionIndex];
@@ -54,6 +82,7 @@ public class GameManager : MonoBehaviour
         }
         UpdateNavigationButtons();
         RestoreQuestionState();
+        UpdateBackground();
     }
 
     public void OnAnswerClicked(int index)

@@ -3282,12 +3282,139 @@ MonoBehaviour:
     revealed: 0
     isCorrect: 0
     discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: Sample text
+    answers:
+    - pene
+    - correcta
+    - femboy
+    - charlie kirk
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
   nextButton: {fileID: 444972164}
   previousButton: {fileID: 738400221}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   correctColor: {r: 0, g: 1, b: 0, a: 1}
   wrongColor: {r: 1, g: 0, b: 0, a: 1}
+  backgroundPanel: {fileID: 2092966361}
+  easyBackground: {fileID: -1364943822504672675, guid: 553472ed6fb6d8a42accca2a04adb922, type: 3}
+  mediumBackground: {fileID: -5685049689755973702, guid: bc8fb74e23aeaca4bbe70e2a2012398b, type: 3}
+  hardBackground: {fileID: -8671805588815063262, guid: 92ba495d7460b3144b8057d1c7ea2d1b, type: 3}
+  mediumIdx: 5
+  hardIdx: 10
 --- !u!4 &1672781192
 Transform:
   m_ObjectHideFlags: 0

@@ -10,6 +10,9 @@ public class AudioManager : MonoBehaviour
 
     [Header("Clips")]
     public AudioClip menuMusic;
+    public AudioClip easyMusic;
+    public AudioClip mediumMusic;
+    public AudioClip hardMusic;
     public AudioClip correctSound;
     public AudioClip wrongSound;
     public AudioClip tensionSound;
@@ -35,6 +38,42 @@ public class AudioManager : MonoBehaviour
     public void PlayMenuMusic()
     {
         musicSource.clip = menuMusic;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+
+    public void PlayEasyMusic()
+    {
+        if (musicSource.clip == easyMusic &&
+        musicSource.isPlaying)
+        {
+            return;
+        }
+        musicSource.clip = easyMusic;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+
+    public void PlayMediumMusic()
+    {
+        if (musicSource.clip == mediumMusic &&
+        musicSource.isPlaying)
+        {
+            return;
+        }
+        musicSource.clip = mediumMusic;
+        musicSource.loop = true;
+        musicSource.Play();
+    }
+
+    public void PlayHardMusic()
+    {
+        if (musicSource.clip == hardMusic &&
+        musicSource.isPlaying)
+        {
+            return;
+        }
+        musicSource.clip = hardMusic;
         musicSource.loop = true;
         musicSource.Play();
     }
