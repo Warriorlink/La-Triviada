@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI questionText;
+    public TextMeshProUGUI currentQuestionText;
     public Button[] answerButtons;
     public Question[] questions;
     private int currentQuestionIndex = 0;
@@ -74,6 +75,7 @@ public class GameManager : MonoBehaviour
     {
         Question q = questions[currentQuestionIndex];
         questionText.text = q.question;
+        currentQuestionText.text = (currentQuestionIndex + 1).ToString();
         for (int i = 0; i < answerButtons.Length; i++)
         {
             int index = i;

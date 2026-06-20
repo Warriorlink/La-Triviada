@@ -393,6 +393,143 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 70091256}
   m_CullTransparentMesh: 1
+--- !u!1 &102696619
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 102696620}
+  - component: {fileID: 102696622}
+  - component: {fileID: 102696621}
+  m_Layer: 5
+  m_Name: CurrentQuestion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &102696620
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102696619}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2092966360}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 420.44006, y: -238.19}
+  m_SizeDelta: {x: 80.8801, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &102696621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102696619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &102696622
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102696619}
+  m_CullTransparentMesh: 1
 --- !u!1 &113845788
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,8 +882,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 170}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 10.36, y: 170}
+  m_SizeDelta: {x: 839.28, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &202424656
 MonoBehaviour:
@@ -4321,151 +4458,240 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionText: {fileID: 202424656}
+  currentQuestionText: {fileID: 102696621}
   answerButtons:
   - {fileID: 1652795516}
   - {fileID: 1838621497}
   - {fileID: 1582535440}
   - {fileID: 709056416}
   questions:
-  - question: Odias a los niggas
+  - question: "\xBFC\xF3mo se llama el Rey de Hyrule en Zelda Breath of the Wild?"
     answers:
-    - Si
-    - No
-    - Pablo Motos
-    - El chico que se parece a Pomni
+    - Daphness Nohansen Hyrule
+    - Gustaf Harkinian Hyrule
+    - Rhoam Bosphoramus Hyrule
+    - Percy Orenne Hyrule
+    correctAnswer: 2
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "En Super Mario Galaxy \xBFQui\xE9n tira a Mario del castillo de Peach
+      en la cinem\xE1tica inicial?"
+    answers:
+    - Bowser
+    - Kamek
+    - Nadie, Mario se tropieza
+    - El rayo de un OVNI
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "En Bloons TD6 \xBFCu\xE1l de estos monos es m\xE1s caro?"
+    answers:
+    - Mono Mago
+    - Desperado
+    - Domador
+    - Tiratachuelas
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "\xBFC\xF3mo se ha traducido este enemigo del Cap\xEDtulo 5?"
+    answers:
+    - Ofidianela
+    - Ofidiannela
+    - Ofidianella
+    - Ofidiadella
+    correctAnswer: 2
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "\xBFCu\xE1nto tard\xF3 Max de Stranger Things en volver al coche con
+      los dem\xE1s en la Temporada 4?"
+    answers:
+    - Menos de 10 segundos
+    - "M\xE1s de 20 segundos"
+    - 15 segundos
+    - "No volvi\xF3"
+    correctAnswer: 1
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "\xBFCu\xE1l de estas sagas fue creada por Hideo Kojima?"
+    answers:
+    - Final Fantasy
+    - Resident Evil
+    - Silent Hill
+    - Metal Gear
+    correctAnswer: 3
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "\xBFC\xF3mo se llama la base de investigaci\xF3n donde ocurren los
+      eventos del primer Half-Life?"
+    answers:
+    - Combine Facility
+    - Aperture Science
+    - Black Mesa
+    - Umbrella Corp.
+    correctAnswer: 2
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "En SQL, \xBFQu\xE9 cl\xE1usula se utiliza para filtrar grupos creados
+      con GROUP BY?"
+    answers:
+    - HAVING
+    - WHERE
+    - ORDER BY
+    - DISTINCT
     correctAnswer: 0
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
     discardedAnswers: 00000000
-  - question: Sample text
+  - question: "\xBFC\xF3mo se llama la carpeta donde Warrior guarda lo poco digno?"
     answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
+    - Minecraft Forge
+    - Apuntes Bachillerato
+    - Zelda BOTW Multiplayer
+    - Nueva Carpeta
+    correctAnswer: 0
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "\xBFQui\xE9n es el protagonista del juego \"The Walking Dead: Season
+      One\"? "
+    answers:
+    - Rick Grimes
+    - Lee Everett
+    - Ani
+    - Clementine
     correctAnswer: 1
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
     discardedAnswers: 00000000
-  - question: Sample text
+  - question: "\xBFCu\xE1l es la frase estrella de Er1z0?"
     answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
+    - Supongo que me lo merezco.
+    - "\xBFHola?"
+    - "\xA1\xA1\xA1Al estilo Super Er1z0!!!"
+    - "Claro que s\xED, perd\xF3n, senpai. Tonto, tonto, tonto..."
+    correctAnswer: 0
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "En Mortal Kombat 11 \xBFQui\xE9n se convierte en el dios del fuego
+      y el rayo?"
+    answers:
+    - Kung Lao
+    - Liu Kang
+    - Raiden
+    - Johnny Cage
     correctAnswer: 1
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
     discardedAnswers: 00000000
-  - question: Sample text
+  - question: "\xBFC\xF3mo se llama el chico que se parece mucho a Pomni?"
     answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
+    - Nodreim
+    - Pomno
+    - Pom
+    - Alberto
+    correctAnswer: 2
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "\xBFC\xF3mo se llamaba el ni\xF1o gordo del Sea of Stars? "
+    answers:
+    - Bastaya
+    - Carl
+    - B'stya
+    - Garl
+    correctAnswer: 3
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "\xBFQu\xE9 dios del pante\xF3n griego destron\xF3 a Helios, el tit\xE1n
+      del sol, convirti\xE9ndose as\xED en el dios del Sol?"
+    answers:
+    - Hefesto
+    - Ares
+    - Apolo
+    - Eros
+    correctAnswer: 2
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "En Bloons TD6 \xBFCu\xE1l de estos monos no puede da\xF1ar camufloons
+      sin la ayuda de otro mono?"
+    answers:
+    - Esfera de rayo (Druida 4-0-0)
+    - Bombardeo (Tirabombas 5-0-0)
+    - Permacarga (Lanzabumeranes 0-5-0)
+    - "Supervor\xE1gine (Tiratachuelas 0-5-0)"
+    correctAnswer: 3
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "\xBFCu\xE1nto cuesta el lote de Deltarune que incluye el juego y su
+      soundtrack?"
+    answers:
+    - "34,63\u20AC"
+    - "30,63\u20AC"
+    - "28,63\u20AC"
+    - "23,99\u20AC"
+    correctAnswer: 0
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "\xBFQu\xE9 actor de doblaje castellano comparten Solid Snake en Metal
+      Gear Solid 1 y Ganondorf en The Legend of Zelda: Tears of the Kingdom?"
+    answers:
+    - Claudio Serrano
+    - Pepe Mediavilla
+    - "Alfonso Vall\xE9s"
+    - Ricardo Solans
+    correctAnswer: 2
+    selectedAnswer: -1
+    revealed: 0
+    isCorrect: 0
+    discardedAnswers: 00000000
+  - question: "En la Peli de Super Mario Galaxy, hablando con la Reina Abeja, Bowser
+      rompe uno de sus brazaletes \xBFC\xF3mo lo repara?"
+    answers:
+    - Se queda roto
+    - Bowser lo recoloca con cuidado
+    - "Al cambiar la escena, ya est\xE1 arreglado"
+    - Bowsy le da uno nuevo
     correctAnswer: 1
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
     discardedAnswers: 00000000
-  - question: Sample text
+  - question: "\xBFCu\xE1l es la t\xE9cnica estrella de Fei y Alex en Sea of Stars?"
     answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
-    correctAnswer: 1
-    selectedAnswer: -1
-    revealed: 0
-    isCorrect: 0
-    discardedAnswers: 00000000
-  - question: Sample text
-    answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
-    correctAnswer: 1
-    selectedAnswer: -1
-    revealed: 0
-    isCorrect: 0
-    discardedAnswers: 00000000
-  - question: Sample text
-    answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
-    correctAnswer: 1
-    selectedAnswer: -1
-    revealed: 0
-    isCorrect: 0
-    discardedAnswers: 00000000
-  - question: Sample text
-    answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
-    correctAnswer: 1
-    selectedAnswer: -1
-    revealed: 0
-    isCorrect: 0
-    discardedAnswers: 00000000
-  - question: Sample text
-    answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
-    correctAnswer: 1
-    selectedAnswer: -1
-    revealed: 0
-    isCorrect: 0
-    discardedAnswers: 00000000
-  - question: Sample text
-    answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
-    correctAnswer: 1
-    selectedAnswer: -1
-    revealed: 0
-    isCorrect: 0
-    discardedAnswers: 00000000
-  - question: Sample text
-    answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
-    correctAnswer: 1
-    selectedAnswer: -1
-    revealed: 0
-    isCorrect: 0
-    discardedAnswers: 00000000
-  - question: Sample text
-    answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
-    correctAnswer: 1
-    selectedAnswer: -1
-    revealed: 0
-    isCorrect: 0
-    discardedAnswers: 00000000
-  - question: Sample text
-    answers:
-    - pene
-    - correcta
-    - femboy
-    - charlie kirk
-    correctAnswer: 1
+    - Lunamerang
+    - Lunerang
+    - Sol abrasador
+    - Lunas arcanas
+    correctAnswer: 3
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4481,8 +4707,8 @@ MonoBehaviour:
   easyBackground: {fileID: 5846460398933347105, guid: a8fe270c62b493e47b1b145212fb60fa, type: 3}
   mediumBackground: {fileID: -7201464627213279744, guid: d505dbbea6395e0499233756f8db0208, type: 3}
   hardBackground: {fileID: 878603859710804535, guid: db32486ed303dfd41946952690406347, type: 3}
-  mediumIdx: 5
-  hardIdx: 10
+  mediumIdx: 6
+  hardIdx: 13
 --- !u!4 &1672781192
 Transform:
   m_ObjectHideFlags: 0
@@ -5075,6 +5301,7 @@ RectTransform:
   - {fileID: 1012623656}
   - {fileID: 113845789}
   - {fileID: 993326203}
+  - {fileID: 102696620}
   m_Father: {fileID: 575375029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
