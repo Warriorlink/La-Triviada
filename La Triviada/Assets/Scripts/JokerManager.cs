@@ -10,7 +10,9 @@ public class JokerManager : MonoBehaviour
     public Button fiftyButton;
     public Button rouletteButton;
     public Button confirmInputButton;
+    public Button confirmRecoverButton;
     public TMP_InputField rouletteInputField;
+    public TMP_InputField recoverInputField;
 
     void Start()
     {
@@ -56,9 +58,7 @@ public class JokerManager : MonoBehaviour
 
         int amount;
 
-        if (!int.TryParse(
-                rouletteInputField.text,
-                out amount))
+        if (!int.TryParse(rouletteInputField.text, out amount))
         {
             return;
         }
@@ -105,6 +105,36 @@ public class JokerManager : MonoBehaviour
             wrongAnswers.RemoveAt(randomIndex);
 
             removed++;
+        }
+    }
+
+    public void UseRecover()
+    {
+        if (gameManager.IsWaitingResult())
+            return;
+
+        int amount;
+
+        if (!int.TryParse(recoverInputField.text, out amount))
+        {
+            return;
+        }
+
+        amount = Mathf.Clamp(amount, 0, 2);
+
+        switch (amount)
+        {
+            case 0:
+                callButton.interactable = true;
+                break;
+            case 1:
+                rouletteButton.interactable = true;
+                break;
+            case 2:
+                fiftyButton.interactable = true;
+                break;
+            default:
+                return;
         }
     }
 }
