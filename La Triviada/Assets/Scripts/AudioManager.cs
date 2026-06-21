@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip correctSound;
     public AudioClip wrongSound;
     public AudioClip tensionSound;
+    public AudioClip noJokersSound;
+    public AudioClip recoverJokersSound;
 
     private void Awake()
     {
@@ -100,6 +102,28 @@ public class AudioManager : MonoBehaviour
     public void PlayTension()
     {
         sfxSource.PlayOneShot(tensionSound);
+    }
+
+    public void PlayNoJokers()
+    {
+        sfxSource.clip = noJokersSound;
+        sfxSource.Play();
+    }
+
+    public void PlayRecoverJokers()
+    {
+        sfxSource.clip = recoverJokersSound;
+        sfxSource.Play();
+    }
+
+    public void StopRecoverJokers()
+    {
+        sfxSource.Stop();
+    }
+
+    public void StopNoJokers()
+    {
+        sfxSource.Stop();
     }
 
     public void PauseMenuMusic()

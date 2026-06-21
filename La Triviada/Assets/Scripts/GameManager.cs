@@ -2,7 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
-using UnityEngine.SceneManagement;  
+using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     public Color wrongColor = Color.red;
 
     public Image backgroundPanel;
+    public Image questionImage;
 
     public Sprite easyBackground;
     public Sprite mediumBackground;
@@ -31,6 +33,12 @@ public class GameManager : MonoBehaviour
 
     public int mediumIdx = 0;
     public int hardIdx = 0;
+
+    public VideoPlayer backgroundVideoPlayer;
+
+    public VideoClip easyVideo;
+    public VideoClip mediumVideo;
+    public VideoClip hardVideo;
 
     private void Start()
     {
@@ -57,16 +65,31 @@ public class GameManager : MonoBehaviour
         if (currentQuestionIndex <= mediumIdx)
         {
             backgroundPanel.sprite = easyBackground;
+            if (backgroundVideoPlayer.clip != easyVideo)
+            {
+                backgroundVideoPlayer.clip = easyVideo;
+                backgroundVideoPlayer.Play();
+            }
             AudioManager.Instance.PlayEasyMusic();
         }
         else if (currentQuestionIndex <= hardIdx)
         {
             backgroundPanel.sprite = mediumBackground;
+            if (backgroundVideoPlayer.clip != mediumVideo)
+            {
+                backgroundVideoPlayer.clip = mediumVideo;
+                backgroundVideoPlayer.Play();
+            }
             AudioManager.Instance.PlayMediumMusic();
         }
         else
         {
             backgroundPanel.sprite = hardBackground;
+            if (backgroundVideoPlayer.clip != hardVideo)
+            {
+                backgroundVideoPlayer.clip = hardVideo;
+                backgroundVideoPlayer.Play();
+            }
             AudioManager.Instance.PlayHardMusic();
         }
     }
@@ -75,6 +98,15 @@ public class GameManager : MonoBehaviour
     {
         Question q = questions[currentQuestionIndex];
         questionText.text = q.question;
+        if (q.image != null)
+        {
+            questionImage.gameObject.SetActive(true);
+            questionImage.sprite = q.image;
+        }
+        else
+        {
+            questionImage.gameObject.SetActive(false);
+        }
         currentQuestionText.text = (currentQuestionIndex + 1).ToString();
         for (int i = 0; i < answerButtons.Length; i++)
         {

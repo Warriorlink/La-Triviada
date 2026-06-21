@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
@@ -13,12 +14,21 @@ public class JokerManager : MonoBehaviour
     public Button confirmRecoverButton;
     public TMP_InputField rouletteInputField;
     public TMP_InputField recoverInputField;
+    public Image noJokersSprite;
+    public Image recoverJokersSprite;
+
+    private int activeJokers = 3;
+    private bool noJokersUsed = false;
+    private bool recoverJokersUsed = false;
 
     void Start()
     {
         rouletteInputField.text = "0";
         rouletteInputField.gameObject.SetActive(false);
         confirmInputButton.gameObject.SetActive(false);
+        activeJokers = 3;
+        noJokersUsed = false;
+        recoverJokersUsed = false;
     }
 
     public void UseCallJoker()
@@ -26,6 +36,8 @@ public class JokerManager : MonoBehaviour
         if (gameManager.IsWaitingResult())
             return;
         callButton.interactable = false;
+        activeJokers -= 1;
+        StartCoroutine(NoJokersImage());
     }
 
     public void UseFiftyJoker()
@@ -36,6 +48,8 @@ public class JokerManager : MonoBehaviour
         RemoveWrongAnswers(2);
 
         fiftyButton.interactable = false;
+        activeJokers -= 1;
+        StartCoroutine(NoJokersImage());
     }
 
     public void ShowRouletteInput()
@@ -68,6 +82,8 @@ public class JokerManager : MonoBehaviour
         RemoveWrongAnswers(amount);
         rouletteInputField.gameObject.SetActive(false);
         confirmInputButton.gameObject.SetActive(false);
+        activeJokers -= 1;
+        StartCoroutine(NoJokersImage());
     }
 
     void RemoveWrongAnswers(int amount)
@@ -122,19 +138,54 @@ public class JokerManager : MonoBehaviour
 
         amount = Mathf.Clamp(amount, 0, 2);
 
+        StartCoroutine(RecoverJokersImage());
+
         switch (amount)
         {
             case 0:
                 callButton.interactable = true;
+                activeJokers += 1;
                 break;
             case 1:
                 rouletteButton.interactable = true;
+                activeJokers += 1;
                 break;
             case 2:
                 fiftyButton.interactable = true;
+                activeJokers += 1;
                 break;
             default:
                 return;
+        }
+    }
+
+    IEnumerator NoJokersImage()
+    {
+        if (activeJokers <= 0 && noJokersUsed == false)
+        {
+            noJokersUsed = true;
+            noJokersSprite.gameObject.SetActive(true);
+            AudioManager.Instance.PauseMenuMusic();
+            AudioManager.Instance.PlayNoJokers();
+            yield return new WaitForSeconds(5.0f);
+            AudioManager.Instance.StopNoJokers();
+            AudioManager.Instance.ResumeMenuMusic();
+            noJokersSprite.gameObject.SetActive(false);
+        }
+    }
+
+    IEnumerator RecoverJokersImage()
+    {
+        if (recoverJokersUsed == false)
+        {
+            recoverJokersUsed = true;
+            recoverJokersSprite.gameObject.SetActive(true);
+            AudioManager.Instance.PauseMenuMusic();
+            AudioManager.Instance.PlayRecoverJokers();
+            yield return new WaitForSeconds(5.0f);
+            AudioManager.Instance.StopRecoverJokers();
+            AudioManager.Instance.ResumeMenuMusic();
+            recoverJokersSprite.gameObject.SetActive(false);
         }
     }
 }

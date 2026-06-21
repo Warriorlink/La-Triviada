@@ -7,6 +7,7 @@ public class Question
     public string question;
     public string[] answers;
     public int correctAnswer;
+    public Sprite image;
 
     public int selectedAnswer = -1;
     public bool revealed = false;
