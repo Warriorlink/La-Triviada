@@ -1944,6 +1944,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738400219}
   m_CullTransparentMesh: 1
+--- !u!1 &802911986
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 802911987}
+  - component: {fileID: 802911989}
+  - component: {fileID: 802911988}
+  m_Layer: 5
+  m_Name: Host
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &802911987
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802911986}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2092966360}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 134.8, y: -197.88}
+  m_SizeDelta: {x: 92, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &802911988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802911986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 8917929811553925442, guid: a4b2746065604b54bb4296a6b445dac6, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &802911989
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802911986}
+  m_CullTransparentMesh: 1
 --- !u!1 &873719649
 GameObject:
   m_ObjectHideFlags: 0
@@ -4562,7 +4637,7 @@ MonoBehaviour:
     - Rhoam Bosphoramus Hyrule
     - Percy Orenne Hyrule
     correctAnswer: 2
-    image: {fileID: 0}
+    image: {fileID: -1966487780961601432, guid: afff5031c58f8e94ab0cea7b86d2341b, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4827,9 +4902,14 @@ MonoBehaviour:
   wrongColor: {r: 1, g: 0, b: 0, a: 1}
   backgroundPanel: {fileID: 2092966361}
   questionImage: {fileID: 1547247858}
+  host: {fileID: 802911988}
   easyBackground: {fileID: -6912221634185531242, guid: f52e482b68bc8564f9e267694ff413ba, type: 3}
   mediumBackground: {fileID: -7201464627213279744, guid: 73b8d2ead5de27a4ab62f3b7483bd6d2, type: 3}
   hardBackground: {fileID: 878603859710804535, guid: bbfb106bfeef3434c9565f72babc6983, type: 3}
+  isma: {fileID: 8917929811553925442, guid: a4b2746065604b54bb4296a6b445dac6, type: 3}
+  erizo: {fileID: 2316958063448365449, guid: 363e7a35805c16e479f288a8bf82000c, type: 3}
+  warrior: {fileID: 641769923810444853, guid: a03f70fe025a5e642861f063525a0178, type: 3}
+  fei: {fileID: -6837859843420322046, guid: a9b4f396ce2a8cd4e85eea91fc194475, type: 3}
   mediumIdx: 6
   hardIdx: 13
   backgroundVideoPlayer: {fileID: 243984}
@@ -5296,6 +5376,7 @@ RectTransform:
   - {fileID: 1547247857}
   - {fileID: 234179898}
   - {fileID: 1042969067}
+  - {fileID: 802911987}
   m_Father: {fileID: 575375029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

@@ -26,10 +26,16 @@ public class GameManager : MonoBehaviour
 
     public Image backgroundPanel;
     public Image questionImage;
+    public Image host;
 
     public Sprite easyBackground;
     public Sprite mediumBackground;
     public Sprite hardBackground;
+
+    public Sprite isma;
+    public Sprite erizo;
+    public Sprite warrior;
+    public Sprite fei;
 
     public int mediumIdx = 0;
     public int hardIdx = 0;
@@ -58,6 +64,33 @@ public class GameManager : MonoBehaviour
     public bool IsWaitingResult()
     {
         return waitingResult;
+    }
+
+    void UpdateHostImage()
+    {
+        RectTransform rect = host.GetComponent<RectTransform>();
+
+        
+        if (currentQuestionIndex <= 4)
+        {
+            host.sprite = isma;
+            rect.sizeDelta = new Vector2(92, 150);
+        }
+        else if (currentQuestionIndex <= 9)
+        {
+            host.sprite = erizo;
+            rect.sizeDelta = new Vector2(92, 150);
+        }
+        else if (currentQuestionIndex <= 14)
+        {
+            host.sprite = warrior;
+            rect.sizeDelta = new Vector2(56, 150);
+        }
+        else
+        {
+            host.sprite = fei;
+            rect.sizeDelta = new Vector2(100, 150);
+        }
     }
 
     void UpdateBackground()
@@ -119,6 +152,7 @@ public class GameManager : MonoBehaviour
         UpdateNavigationButtons();
         RestoreQuestionState();
         UpdateBackground();
+        UpdateHostImage();
     }
 
     public void OnAnswerClicked(int index)
