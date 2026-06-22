@@ -4174,7 +4174,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -100}
-  m_SizeDelta: {x: 200, y: 200}
+  m_SizeDelta: {x: 270, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1547247858
 MonoBehaviour:
@@ -4637,7 +4637,7 @@ MonoBehaviour:
     - Rhoam Bosphoramus Hyrule
     - Percy Orenne Hyrule
     correctAnswer: 2
-    image: {fileID: -1966487780961601432, guid: afff5031c58f8e94ab0cea7b86d2341b, type: 3}
+    image: {fileID: 5155163167032735316, guid: f72052de40ad88e4e80e2e6176a08eaf, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4650,7 +4650,7 @@ MonoBehaviour:
     - Nadie, Mario se tropieza
     - El rayo de un OVNI
     correctAnswer: 1
-    image: {fileID: 0}
+    image: {fileID: -4464237010107836687, guid: aafef2851eee8d54da7d2298b3f76279, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4662,7 +4662,7 @@ MonoBehaviour:
     - Domador
     - Tiratachuelas
     correctAnswer: 1
-    image: {fileID: 0}
+    image: {fileID: 2037120817534264460, guid: 5dc7ccc4637254c428e7dc44fdf7e9d9, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4674,7 +4674,7 @@ MonoBehaviour:
     - Ofidianella
     - Ofidiadella
     correctAnswer: 2
-    image: {fileID: 0}
+    image: {fileID: -4060339134492186001, guid: a371aefba42bb9f48b4d53046069a0d3, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4687,7 +4687,7 @@ MonoBehaviour:
     - 15 segundos
     - "No volvi\xF3"
     correctAnswer: 1
-    image: {fileID: 0}
+    image: {fileID: 4130640169021434097, guid: 0350743171c477d40a3345b1c91701ae, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4699,7 +4699,7 @@ MonoBehaviour:
     - Silent Hill
     - Metal Gear
     correctAnswer: 3
-    image: {fileID: 0}
+    image: {fileID: 3465286685962602723, guid: d965d9980168434418a76c852b63c801, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4712,7 +4712,7 @@ MonoBehaviour:
     - Black Mesa
     - Umbrella Corp.
     correctAnswer: 2
-    image: {fileID: 0}
+    image: {fileID: 7028616704906629411, guid: 6c96f159e05fa4c439a851df52e5ba6a, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4725,7 +4725,7 @@ MonoBehaviour:
     - ORDER BY
     - DISTINCT
     correctAnswer: 0
-    image: {fileID: 0}
+    image: {fileID: 8288426215254106694, guid: 64f025066d434fa4da5f7485a871ebf3, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4737,7 +4737,7 @@ MonoBehaviour:
     - Zelda BOTW Multiplayer
     - Nueva Carpeta
     correctAnswer: 0
-    image: {fileID: 0}
+    image: {fileID: 4113829005332862926, guid: c285ffc4496a1df418c04a3ac4d02568, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4750,7 +4750,7 @@ MonoBehaviour:
     - Ani
     - Clementine
     correctAnswer: 1
-    image: {fileID: 0}
+    image: {fileID: -5099292496197868168, guid: 6600a413d1e8eb84995b18f64608ece1, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4762,7 +4762,7 @@ MonoBehaviour:
     - "\xA1\xA1\xA1Al estilo Super Er1z0!!!"
     - "Claro que s\xED, perd\xF3n, senpai. Tonto, tonto, tonto..."
     correctAnswer: 0
-    image: {fileID: 0}
+    image: {fileID: -2966200626249415253, guid: ef915bb719f4af24b88a94e489ed67b0, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4775,7 +4775,7 @@ MonoBehaviour:
     - Raiden
     - Johnny Cage
     correctAnswer: 1
-    image: {fileID: 0}
+    image: {fileID: -1540426309290004842, guid: d501536bc1290864d8e159d5e1caadd9, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4787,7 +4787,7 @@ MonoBehaviour:
     - Pom
     - Alberto
     correctAnswer: 2
-    image: {fileID: 0}
+    image: {fileID: 8389134475083476877, guid: 70f7f499129605e4e9e577d4db0340ed, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4799,7 +4799,7 @@ MonoBehaviour:
     - B'stya
     - Garl
     correctAnswer: 3
-    image: {fileID: 0}
+    image: {fileID: -6270953770400647376, guid: fd0ed3d1a6793ec40bc8e76c2c2d5f4b, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4812,7 +4812,7 @@ MonoBehaviour:
     - Apolo
     - Eros
     correctAnswer: 2
-    image: {fileID: 0}
+    image: {fileID: 4349915267927364619, guid: 94f0b424c284f7944abf998a04731073, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4825,7 +4825,7 @@ MonoBehaviour:
     - Permacarga (Lanzabumeranes 0-5-0)
     - "Supervor\xE1gine (Tiratachuelas 0-5-0)"
     correctAnswer: 3
-    image: {fileID: 0}
+    image: {fileID: 7680820834086852892, guid: 5806c0ca4b2ccc04c88feae2d4e74acf, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4838,7 +4838,7 @@ MonoBehaviour:
     - "28,63\u20AC"
     - "23,99\u20AC"
     correctAnswer: 0
-    image: {fileID: 0}
+    image: {fileID: 6660783624410144326, guid: 28c8e6292192e614ca6f4008f21ed307, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4851,7 +4851,7 @@ MonoBehaviour:
     - "Alfonso Vall\xE9s"
     - Ricardo Solans
     correctAnswer: 2
-    image: {fileID: 0}
+    image: {fileID: 2960402581040015946, guid: 8ffd24f427133d5498c489b2e0c1cb59, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4864,7 +4864,7 @@ MonoBehaviour:
     - "Al cambiar la escena, ya est\xE1 arreglado"
     - Bowsy le da uno nuevo
     correctAnswer: 1
-    image: {fileID: 0}
+    image: {fileID: 7157561037332017152, guid: 1475f64f7d2a1c447940b673a9ee5347, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4876,7 +4876,7 @@ MonoBehaviour:
     - Sol abrasador
     - Lunas arcanas
     correctAnswer: 3
-    image: {fileID: 0}
+    image: {fileID: 4164744761163438241, guid: 22c79b1c476c8c54ea5d1f59e00cd110, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -4888,7 +4888,7 @@ MonoBehaviour:
     - Clavel
     - "Tupil\xE1n"
     correctAnswer: 3
-    image: {fileID: 0}
+    image: {fileID: -5750353039905602045, guid: 2eae39cd7ea9a194fad0bf69a09fb4bb, type: 3}
     selectedAnswer: -1
     revealed: 0
     isCorrect: 0
@@ -5369,11 +5369,11 @@ RectTransform:
   - {fileID: 200129216}
   - {fileID: 873719651}
   - {fileID: 1071634414}
+  - {fileID: 1547247857}
   - {fileID: 1012623656}
   - {fileID: 113845789}
   - {fileID: 993326203}
   - {fileID: 102696620}
-  - {fileID: 1547247857}
   - {fileID: 802911987}
   - {fileID: 234179898}
   - {fileID: 1042969067}
